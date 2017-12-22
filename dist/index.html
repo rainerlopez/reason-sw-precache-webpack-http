@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pure Reason Example</title>
+</head>
+
+<body>
+  <div class="testeClass" id="teste">lalala</div>
+
+  <script>
+    (function () {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+      }
+    })();
+  </script>
+</body>
+
+</html>

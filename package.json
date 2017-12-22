@@ -1,0 +1,26 @@
+{
+  "name": "reason-sw-precache-webpack-plugin",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "concurrently -p \"bsb -clean-world -w\" \"bsb -make-world\" \"webpack\"",
+    "serve": "http-server ./dist -a localhost -p 8080",
+    "app-webpack": "concurrently -p \"webpack\" \"npm run serve\"",
+    "start": "concurrently -p \"bsb -clean-world -w\" \"bsb -make-world -w\" \"npm run app-webpack\"",
+    "clean": "bsb -clean-world"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^2.1.0",
+    "concurrently": "^3.5.1",
+    "gsap": "^1.20.3",
+    "http-server": "^0.10.0",
+    "sw-precache": "^5.2.0",
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {}
+}
